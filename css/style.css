@@ -653,7 +653,6 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  margin-bottom: 8rem;
 }
 .row::after {
   content: "";
@@ -693,4 +692,37 @@ body {
 }
 [class^=col-]:not(:last-child) {
   margin-right: 6rem;
+}
+
+.footer {
+  padding: 8rem;
+  background-color: #333333;
+}
+.footer__logo {
+  width: 12rem;
+}
+.footer__list {
+  list-style: none;
+  text-align: center;
+}
+.footer__item {
+  display: inline-block;
+}
+.footer__item:not(:last-child) {
+  margin-right: 5rem;
+}
+.footer__link:link, .footer__link:visited {
+  color: #777777;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  display: inline-block;
+  transition: all 0.3s ease-in;
+}
+.footer__link:hover {
+  transform: scale(1.1) translateY(-0.5rem);
+  color: #A14F03;
+  text-shadow: 0, 0.4rem, 0.4rem, rgba(0, 0, 0, 0.3);
 }/*# sourceMappingURL=style.css.map */

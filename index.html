@@ -323,73 +323,69 @@
         </section>
 
         <section class="section-book">
-          <div class="row">
-            <div class="book">
-              <div class="book__form">
-                <form action="#" class="form">
-                  <div class="text-align-center margin-bottom-30px">
-                    <h2 class="title-secondary">Забронировать тур</h2>
-                  </div>
-                  <div class="form__group">
+          <div class="book">
+            <div class="book__form">
+              <form action="#" class="form">
+                <div class="text-align-center margin-bottom-30px">
+                  <h2 class="title-secondary">Забронировать тур</h2>
+                </div>
+                <div class="form__group">
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="ФИО"
+                    id="name"
+                    required
+                    autocomplete="off"
+                  />
+                  <label for="name" class="form__label">ФИО</label>
+                </div>
+
+                <div class="form__group">
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Почтовый адрес"
+                    id="email"
+                    required
+                    autocomplete="off"
+                  />
+                  <label for="email" class="form__label">Почтовый адрес</label>
+                </div>
+
+                <div class="form__group">
+                  <div class="form__group-radio">
                     <input
-                      type="text"
-                      class="form__input"
-                      placeholder="ФИО"
-                      id="name"
-                      required
-                      autocomplete="off"
+                      type="radio"
+                      class="form__input-radio"
+                      id="group"
+                      name="checked"
+                      checked
                     />
-                    <label for="name" class="form__label">ФИО</label>
+                    <label for="group" class="form__label-radio">
+                      <span class="form__button-radio"></span>
+                      Групповой тур
+                    </label>
                   </div>
 
-                  <div class="form__group">
+                  <div class="form__group-radio">
                     <input
-                      type="email"
-                      class="form__input"
-                      placeholder="Почтовый адрес"
-                      id="email"
-                      required
-                      autocomplete="off"
+                      type="radio"
+                      class="form__input-radio"
+                      id="tour"
+                      name="checked"
                     />
-                    <label for="email" class="form__label"
-                      >Почтовый адрес</label
-                    >
+                    <label for="tour" class="form__label-radio">
+                      <span class="form__button-radio"></span>
+                      Индивидуальный тур
+                    </label>
                   </div>
+                </div>
 
-                  <div class="form__group">
-                    <div class="form__group-radio">
-                      <input
-                        type="radio"
-                        class="form__input-radio"
-                        id="group"
-                        name="checked"
-                        checked
-                      />
-                      <label for="group" class="form__label-radio">
-                        <span class="form__button-radio"></span>
-                        Групповой тур
-                      </label>
-                    </div>
-
-                    <div class="form__group-radio">
-                      <input
-                        type="radio"
-                        class="form__input-radio"
-                        id="tour"
-                        name="checked"
-                      />
-                      <label for="tour" class="form__label-radio">
-                        <span class="form__button-radio"></span>
-                        Индивидуальный тур
-                      </label>
-                    </div>
-                  </div>
-
-                  <div class="form__group">
-                    <button class="btn btn-animated"></button>
-                  </div>
-                </form>
-              </div>
+                <div class="form__group">
+                  <button class="btn btn-brown">Забронировать</button>
+                </div>
+              </form>
             </div>
           </div>
         </section>

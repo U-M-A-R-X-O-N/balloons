@@ -625,6 +625,120 @@ body {
   background: linear-gradient(90deg, #ba8554, #A14F03);
 }
 
+.navigation__toggle {
+  display: none;
+}
+.navigation__button {
+  background: #FFF;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 10rem;
+  right: 10rem;
+  z-index: 200;
+  text-align: center;
+}
+.navigation__background {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: radial-gradient(#ba8554, #A14F03);
+  position: fixed;
+  top: 11rem;
+  right: 11rem;
+  z-index: 100;
+  transition: all 0.3s ease-in;
+}
+.navigation__nav {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 150;
+  opacity: 0;
+  width: 0;
+  transition: all 0.3s ease-in;
+}
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  width: 100%;
+}
+.navigation__item {
+  text-align: center;
+}
+.navigation__item:not(:last-child) {
+  margin-bottom: 5rem;
+}
+.navigation__link:link, .navigation__link:visited {
+  font-size: 4rem;
+  color: #FFF;
+  letter-spacing: 0.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: linear-gradient(120deg, transparent 0, transparent 50%, #FFF 50%);
+  background-size: 250%;
+  padding: 1rem 2rem;
+  display: inline-block;
+  transition: all 0.3s ease-in;
+}
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: #A14F03;
+  transform: translateX(1rem);
+}
+.navigation__toggle:checked ~ .navigation__background {
+  transform: scale(80);
+}
+.navigation__toggle:checked ~ .navigation__nav {
+  width: 100%;
+  opacity: 1;
+}
+.navigation__icon {
+  position: relative;
+  margin-top: 35px;
+}
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  width: 26px;
+  height: 2px;
+  background: #000;
+  display: inline-block;
+}
+.navigation__icon::before, .navigation__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease-in;
+}
+.navigation__icon::before {
+  top: -8px;
+}
+.navigation__icon::after {
+  top: 8px;
+}
+.navigation__button:hover .navigation__icon::before {
+  top: -10px;
+}
+.navigation__button:hover .navigation__icon::after {
+  top: 10px;
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon {
+  background: transparent;
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+.navigation__toggle:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
 .header {
   height: 95vh;
   background: linear-gradient(90deg, rgba(186, 133, 84, 0.7), rgba(0, 0, 0, 0.7) 99.94%), url(../img/balloon.jpg);
